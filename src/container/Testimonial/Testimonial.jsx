@@ -62,7 +62,7 @@ const Testimonial = () => {
             transition={{ duration: 0.5, type: 'tween' }}
             key={brand._id}
           >
-            <img src={urlFor(brand.imgUrl)} alt={brand.name} />
+            <img src={urlFor(brand?.imgUrl)} alt={brand.name} />
           </motion.div>
         ))}
       </div>
@@ -72,6 +72,6 @@ const Testimonial = () => {
 
 export default AppWrap(
   MotionWrap(Testimonial, 'app__testimonial'),
-  'testimonial',
+  'testimonials',
   'app__primarybg',
 );

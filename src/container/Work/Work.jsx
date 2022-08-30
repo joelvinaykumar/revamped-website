@@ -31,7 +31,8 @@ const Work = () => {
       if (item === 'All') {
         setFilterWork(works);
       } else {
-        setFilterWork(works.filter((work) => work.tags.includes(item)));
+        console.log(works);
+        setFilterWork(works?.filter((work) => work.tags.includes(item)));
       }
     }, 500);
   };
@@ -57,12 +58,17 @@ const Work = () => {
         transition={{ duration: 0.5, delayChildren: 0.5 }}
         className="app__work-portfolio"
       >
-        {filterWork.map((work, index) => (
+        {filterWork?.length === 0 && (
+          <div className="empty">
+            <h4 className="bold-text">No items here. Please check other filters.</h4>
+          </div>
+        )}
+        {filterWork?.map((work, index) => (
           <div className="app__work-item app__flex" key={index}>
             <div
               className="app__work-img app__flex"
             >
-              <img src={urlFor(work.imgUrl)} alt={work.name} />
+              <img src={urlFor(work?.imgUrl)} alt={work.name} />
 
               <motion.div
                 whileHover={{ opacity: [0, 1] }}
@@ -98,7 +104,7 @@ const Work = () => {
               <p className="p-text" style={{ marginTop: 10 }}>{work.description}</p>
 
               <div className="app__work-tag app__flex">
-                <p className="p-text">{work.tags[0]}</p>
+                <p className="p-text">{work?.tags?.[0]}</p>
               </div>
             </div>
           </div>
