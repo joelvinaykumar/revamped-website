@@ -1,3 +1,4 @@
 import images from './images';
+import routes from './routes';
 
-export { images };
+export { images, routes };

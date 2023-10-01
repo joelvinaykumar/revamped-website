@@ -27,7 +27,7 @@ const Header = () => (
         <div className="badge-cmp app__flex">
           <span>👋</span>
           <div style={{ marginLeft: 20 }}>
-            <p className="p-text">Hello, I am</p>
+            <p className="p-text">Hej, I am</p>
             <h1 className="head-text">Joel</h1>
           </div>
         </div>
@@ -59,7 +59,7 @@ const Header = () => (
       whileInView={scaleVariants.whileInView}
       className="app__header-circles"
     >
-      {[images.node, images.react, images.mu5, images.redux, images.typescript].map((circle, index) => (
+      {[images.node, images.react, images.mu5, images.redux, images.typescript, images.antd].map((circle, index) => (
         <div className="circle-cmp app__flex" key={`circle-${index}`}>
           <img src={circle} alt="profile_bg" />
         </div>

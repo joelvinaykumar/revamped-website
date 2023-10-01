@@ -1,10 +1,20 @@
-# Micael - The Ultimate Web Development Portfolio 
-![Micael](https://i.ibb.co/fHPM38q/image.png)
+# Welcome
+![Joel](src/assets/jvk.netlify.app-home.png)
+[Demo](https://jvk.netlify.app)
 
 ## Introduction
-This is a code repository for the corresponding video tutorial.
+Hi, this is my personal portfolio. I made this to showcase my projects.
 
-Do you know the best way to show your skills to employers or potential clients? Stand out from the crowd by presenting a well-digitalized flexible portfolio and get your dream job.
+## How did I build
 
-## Stay up to date with new projects
-New major projects coming soon, subscribe to the mailing list to stay up to date https://resource.jsmasterypro.com/newsletter
+* User interface with React.js with SASS
+* Sanity as a backend to store the details of each section
+* Assorted all images as one module
+* Used framer motion for animations
+
+## Environment
+
+```
+REACT_APP_SANITY_PROJECT_ID=
+REACT_APP_SANITY_TOKEN=
+```
